@@ -1,0 +1,60 @@
+.main-wrapper {
+  display: grid;
+  justify-content: center;
+}
+
+.inner-container {
+  display: grid;
+  position: relative;
+  gap: 3rem;
+  grid-template-areas:
+    "paper scissors"
+    "rock rock";
+}
+
+.paper {
+  background: radial-gradient(var(--Paper-gradient));
+  border-bottom-color: hsla(230, 89%, 65%, 0.5);
+  grid-area: paper;
+  margin-right: 1rem;
+}
+
+.scissors {
+  background: radial-gradient(var(--Scissors-gradient));
+  border-bottom-color: hsla(40, 84%, 53%, 0.5);
+  grid-area: scissors;
+  margin-left: 1rem;
+}
+
+.rock {
+  background: radial-gradient(var(--Rock-gradient));
+  border-bottom-color: hsla(349, 70%, 56%, 0.5);
+  grid-area: rock;
+  justify-self: center;
+  margin-top: -1.6rem;
+}
+
+.connector {
+  height: 1rem;
+  width: 10rem;
+  position: absolute;
+  z-index: -1;
+  background-color: hsl(237, 49%, 15%);
+}
+
+.connector:nth-child(1) {
+  top: 20%;
+  left: 40%;
+}
+
+.connector:nth-child(2) {
+  top: 50%;
+  transform: rotate(65deg);
+  left: 15%;
+}
+
+.connector:nth-child(3) {
+  top: 50%;
+  transform: rotate(-65deg);
+  right: 15%;
+}
