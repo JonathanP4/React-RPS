@@ -3,11 +3,7 @@
   padding: 1.5rem;
   border-bottom: 10px outset;
   cursor: pointer;
-  transition: transform 0.2s linear;
-}
-
-.button:hover {
-  transform: scale(105%);
+  transition: transform, filter, 150ms;
 }
 
 .button__image-wrapper {

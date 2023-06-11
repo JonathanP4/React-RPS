@@ -12,6 +12,11 @@
     "rock rock";
 }
 
+.button:hover {
+  transform: scale(105%);
+  filter: brightness(110%);
+}
+
 .paper {
   background: radial-gradient(var(--Paper-gradient));
   border-bottom-color: hsla(230, 89%, 65%, 0.5);

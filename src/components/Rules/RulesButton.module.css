@@ -1,13 +1,12 @@
 .btn-rules {
-  display: flex;
-  justify-content: end;
-  padding-right: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
 
-.btn-rules button {
+.btn-rules {
   color: white;
   background: none;
-  text-transform: uppercase;
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
   font-size: 1.2rem;
@@ -17,7 +16,7 @@
   transition: color, background-color, 0.3s;
 }
 
-.btn-rules button:hover {
+.btn-rules:hover {
   background-color: white;
   color: var(--Dark-text);
 }

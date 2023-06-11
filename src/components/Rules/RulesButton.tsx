@@ -1,9 +1,13 @@
 import classes from "./RulesButton.module.css";
-function RulesButton() {
+function RulesButton(props: { clickEvent: () => void }) {
   return (
-    <div className={classes["btn-rules"]}>
-      <button aria-label="rules">Rules</button>
-    </div>
+    <button
+      className={classes["btn-rules"]}
+      onClick={props.clickEvent}
+      aria-label="rules"
+    >
+      RULES
+    </button>
   );
 }
 
