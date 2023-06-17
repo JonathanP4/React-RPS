@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.choose {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 200px);
+  gap: 4rem;
+}
+
+.connector {
+  background-color: hsl(237, 49%, 15%);
+  width: 150px;
+  height: 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+.connector:nth-of-type(1) {
+  left: 10rem;
+  top: 6rem;
+}
+
+.connector:nth-of-type(2) {
+  top: 14rem;
+  left: 5rem;
+  transform: rotate(60deg);
+}
+
+.connector:nth-of-type(3) {
+  top: 14rem;
+  right: 5rem;
+  transform: rotate(-60deg);
+}
+
+.hand {
+  width: 200px;
+  height: 210px;
+  cursor: pointer;
+  transition: transform, filter, 0.2s ease-in-out;
+}
+
+.hand div {
+  width: 150px;
+  height: 150px;
+}
+
+.hand img {
+  width: 70px;
+}
+
+.hand:hover {
+  transform: scale(103%);
+  filter: brightness(108%);
+}
+
+.paper {
+  background: radial-gradient(circle, var(--Paper-gradient));
+  border-bottom: 10px outset hsl(230, 89%, 65%);
+}
+
+.scissors {
+  background: radial-gradient(circle, var(--Scissors-gradient));
+  border-bottom: 10px outset hsl(40, 84%, 53%);
+}
+
+.rock {
+  background: radial-gradient(circle, var(--Rock-gradient));
+  border-bottom: 10px outset hsl(349, 70%, 56%);
+  justify-self: center;
+  grid-column: 1 / span 2;
+  margin-top: -35px;
+}

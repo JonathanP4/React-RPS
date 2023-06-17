@@ -1,36 +1,28 @@
 import { useState } from "react";
-import RulesModal from "./components/Rules/RulesModal";
-import Score from "./components/Score/Score";
-import PickHand from "./components/RPSPick/PickHand";
-import RulesButton from "./components/Rules/RulesButton";
-import Game from "./components/GamePage/Game";
-
-export type Hands = "rock" | "paper" | "scissors";
-
-let initState: Hands;
+import RulesButton from "./components/Buttons/RulesButton";
+import ChooseHand from "./components/Game/ChooseHand";
+import GameStart from "./components/Game/GameStart";
+import ScoreHeader from "./components/Game/ScoreHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { UiState, uiActions } from "./store/ui-slice";
 
 function App() {
-  const [showRules, setShowRules] = useState(false);
-  const [startGame, setStartGame] = useState(false);
-  const [hand, setHand] = useState(initState);
+  const gameStart = useSelector((state: UiState) => state.ui.startGame);
+  const dispatch = useDispatch();
 
-  function clickHandler() {
-    setShowRules((state) => !state);
-  }
-
-  function chooseHand(hand: Hands) {
-    setHand(hand);
-    setStartGame(true);
+  function toggleStart() {
+    dispatch(uiActions.toggleGameStart());
   }
 
   return (
-    <>
-      {showRules && <RulesModal clickEvent={clickHandler} />}
-      <Score />
-      {!startGame && <PickHand clickEvent={chooseHand} />}
-      {startGame && <Game hand={hand} setState={setStartGame} />}
-      <RulesButton clickEvent={clickHandler} />
-    </>
+    <main>
+      <header>
+        <ScoreHeader />
+      </header>
+      {!gameStart && <ChooseHand clickEvent={toggleStart} />}
+      {gameStart && <GameStart clickEvent={toggleStart} />}
+      <RulesButton />
+    </main>
   );
 }
 

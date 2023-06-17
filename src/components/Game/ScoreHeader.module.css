@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border: 3px solid var(--Header-outline);
+  border-radius: 1rem;
+  color: white;
+  width: 55%;
+  margin: 2rem auto;
+}
+
+.heading {
+  width: min-content;
+  color: white;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.score {
+  background-color: white;
+  padding: 1rem 3rem;
+  text-align: center;
+  border-radius: 0.6rem;
+}
+
+.score span {
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+  font-weight: 700;
+  color: var(--Score-text);
+}
+
+.score h2 {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 0;
+  color: var(--Dark-text);
+}

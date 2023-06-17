@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  column-gap: 3rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.container h1 {
+  letter-spacing: 0.125rem;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hand {
+  width: 300px;
+  height: 300px;
+}
+
+.random-hand {
+  opacity: 0;
+  transform: scale(0%);
+  animation: show 200ms linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
+.hand div {
+  width: 230px;
+  height: 230px;
+}
+
+.hand img {
+  width: 100px;
+}
+
+.paper {
+  background: radial-gradient(circle, var(--Paper-gradient));
+  border-bottom: 10px outset hsl(230, 89%, 65%);
+}
+
+.scissors {
+  background: radial-gradient(circle, var(--Scissors-gradient));
+  border-bottom: 10px outset hsl(40, 84%, 53%);
+}
+
+.rock {
+  background: radial-gradient(circle, var(--Rock-gradient));
+  border-bottom: 10px outset hsl(349, 70%, 56%);
+}
+
+.game-result-container {
+  opacity: 0;
+  margin: 0 -7rem;
+  transform: scaleX(0%);
+  animation: appear 100ms linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    margin: 0;
+    transform: scaleX(100%);
+  }
+}
+
+.game-result-container h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.game-result-container button {
+  background-color: white;
+  color: var(--Score-text);
+  padding: 0.7rem 0;
+  width: 200px;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.125rem;
+  border-radius: 0.6rem;
+}
+
+div:has(div.placeholder) {
+  position: relative;
+}
+
+.placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: hsl(237, 49%, 15%);
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+  animation: hide 190ms linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    transform: scale(0%);
+  }
+}

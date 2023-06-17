@@ -1,25 +1,28 @@
 import classes from "./RulesModal.module.css";
-import closeIcon from "/images/icon-close.svg";
-import { createPortal } from "react-dom";
 
-function RulesModal(props: { clickEvent: () => void }) {
-  return createPortal(
+import iconClose from "/images/icon-close.svg";
+
+interface Props {
+  clickEvent: () => void;
+}
+function RulesModal({ clickEvent }: Props) {
+  return (
     <>
-      <div onClick={props.clickEvent} className={classes.overlay}></div>
+      <div className={classes.overlay}></div>
       <div className={classes.modal}>
         <div>
-          <p>RULES</p>
-          <img onClick={props.clickEvent} src={closeIcon} alt="close modal" />
+          <h1>RULES</h1>
+          <img onClick={clickEvent} src={iconClose} alt="close rules modal" />
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" width="304" height="270">
           <defs>
             <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
-              <stop offset="0%" stop-color="#FFF" stop-opacity=".097" />
-              <stop offset="100%" stop-color="#FFF" stop-opacity="0" />
+              <stop offset="0%" stopColor="#FFF" stopOpacity=".097" />
+              <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
             </linearGradient>
             <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%">
-              <stop offset="0%" stop-color="#FFF" stop-opacity=".097" />
-              <stop offset="100%" stop-color="#FFF" stop-opacity="0" />
+              <stop offset="0%" stopColor="#FFF" stopOpacity=".097" />
+              <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
             </linearGradient>
           </defs>
           <g fill="none" fillRule="evenodd">
@@ -113,10 +116,10 @@ function RulesModal(props: { clickEvent: () => void }) {
             </g>
             <text
               fill="#B1B4C5"
-              font-family="BarlowSemiCondensed-Bold, Barlow Semi Condensed"
-              font-size="13"
-              font-style="condensed"
-              font-weight="bold"
+              fontFamily="BarlowSemiCondensed-Bold, Barlow Semi Condensed"
+              fontSize="13"
+              fontStyle="condensed"
+              fontWeight="bold"
             >
               <tspan x="134" y="31">
                 BEATS
@@ -124,10 +127,10 @@ function RulesModal(props: { clickEvent: () => void }) {
             </text>
             <text
               fill="#B1B4C5"
-              font-family="BarlowSemiCondensed-Bold, Barlow Semi Condensed"
-              font-size="13"
-              font-style="condensed"
-              font-weight="bold"
+              fontFamily="BarlowSemiCondensed-Bold, Barlow Semi Condensed"
+              fontSize="13"
+              fontStyle="condensed"
+              fontWeight="bold"
             >
               <tspan x="40" y="147">
                 BEATS
@@ -135,10 +138,10 @@ function RulesModal(props: { clickEvent: () => void }) {
             </text>
             <text
               fill="#B1B4C5"
-              font-family="BarlowSemiCondensed-Bold, Barlow Semi Condensed"
-              font-size="13"
-              font-style="condensed"
-              font-weight="bold"
+              fontFamily="BarlowSemiCondensed-Bold, Barlow Semi Condensed"
+              fontSize="13"
+              fontStyle="condensed"
+              fontWeight="bold"
             >
               <tspan x="235" y="147">
                 BEATS
@@ -165,8 +168,7 @@ function RulesModal(props: { clickEvent: () => void }) {
           </g>
         </svg>
       </div>
-    </>,
-    document.getElementById("modal") as HTMLDivElement
+    </>
   );
 }
 

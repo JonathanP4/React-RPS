@@ -1,0 +1,18 @@
+.button {
+  position: fixed;
+  background: transparent;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.6);
+  border-radius: 0.5rem;
+  color: white;
+  letter-spacing: 0.125rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  transition: background, 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: white;
+  color: var(--Dark-text);
+}

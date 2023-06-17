@@ -1,0 +1,57 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: hsla(237, 49%, 15%, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: showOverlay 150ms linear forwards;
+}
+
+@keyframes showOverlay {
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: grid;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  opacity: 0;
+  animation: showModal 150ms linear forwards;
+}
+
+@keyframes showModal {
+  to {
+    opacity: 1;
+  }
+}
+
+.modal div:has(h1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Dark-text);
+  margin-bottom: 2rem;
+}
+
+.modal h1 {
+  line-height: 0;
+}
+
+.modal img {
+  cursor: pointer;
+}
+
+.modal svg {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
