@@ -1,4 +1,3 @@
-import { useState } from "react";
 import RulesButton from "./components/Buttons/RulesButton";
 import ChooseHand from "./components/Game/ChooseHand";
 import GameStart from "./components/Game/GameStart";
