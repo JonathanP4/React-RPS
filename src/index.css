@@ -52,6 +52,6 @@ button:focus-visible {
 
 main {
   display: grid;
-  min-height: 100vh;
+  min-height: 100svh;
   align-content: space-between;
 }

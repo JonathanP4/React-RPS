@@ -112,3 +112,46 @@ div:has(div.placeholder) {
     transform: scale(0%);
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-areas:
+      "hand hand"
+      "result result";
+  }
+  .hand-div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .hand-div h1 {
+    font-size: 1.3rem;
+  }
+  .hand {
+    width: 150px;
+    height: 155px;
+    order: 1;
+  }
+
+  .hand div {
+    width: 115px;
+    height: 115px;
+  }
+
+  .hand img {
+    width: 60px;
+  }
+  .placeholder {
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -80%);
+  }
+  .game-result-container {
+    grid-area: result;
+  }
+  .game-result-container h1 {
+    font-size: 2rem;
+  }
+}

@@ -10,10 +10,7 @@ function RulesModal({ clickEvent }: Props) {
     <>
       <div className={classes.overlay}></div>
       <div className={classes.modal}>
-        <div>
-          <h1>RULES</h1>
-          <img onClick={clickEvent} src={iconClose} alt="close rules modal" />
-        </div>
+        <h1>RULES</h1>
         <svg xmlns="http://www.w3.org/2000/svg" width="304" height="270">
           <defs>
             <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
@@ -167,6 +164,7 @@ function RulesModal({ clickEvent }: Props) {
             </g>
           </g>
         </svg>
+        <img onClick={clickEvent} src={iconClose} alt="close rules modal" />
       </div>
     </>
   );

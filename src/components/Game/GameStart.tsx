@@ -29,7 +29,7 @@ function GameStart({ clickEvent }: Props) {
 
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes["hand-div"]}>
         <h1>YOU PICKED</h1>
         <RPSHand
           name={playerHand.name}
@@ -45,7 +45,7 @@ function GameStart({ clickEvent }: Props) {
         </button>
       </div>
 
-      <div>
+      <div className={classes["hand-div"]}>
         <h1>THE HOUSE PICKED</h1>
         <div className={classes.placeholder}></div>
 
