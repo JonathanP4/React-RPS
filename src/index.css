@@ -49,3 +49,9 @@ button:focus,
 button:focus-visible {
   outline: 0;
 }
+
+main {
+  display: grid;
+  min-height: 100vh;
+  align-content: space-between;
+}

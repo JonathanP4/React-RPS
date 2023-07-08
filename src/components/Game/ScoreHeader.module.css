@@ -1,4 +1,5 @@
 .header {
+  top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,7 +7,8 @@
   border: 3px solid var(--Header-outline);
   border-radius: 1rem;
   color: white;
-  width: 55%;
+  max-width: 40rem;
+  min-width: 10rem;
   margin: 2rem auto;
 }
 
@@ -40,4 +42,23 @@
   line-height: 4rem;
   margin: 0;
   color: var(--Dark-text);
+}
+@media (max-width: 768px) {
+  .header {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.8rem 1.5rem;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+  }
+  .score {
+    padding: 0.8rem 2rem;
+  }
+  .score h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }

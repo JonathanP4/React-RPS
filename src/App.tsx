@@ -14,14 +14,14 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <header>
         <ScoreHeader />
       </header>
       {!gameStart && <ChooseHand clickEvent={toggleStart} />}
       {gameStart && <GameStart clickEvent={toggleStart} />}
       <RulesButton />
-    </div>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@
   background: transparent;
   bottom: 1.5rem;
   right: 1.5rem;
+  background: transparent;
   border: 2px solid hsla(0, 0%, 100%, 0.6);
   border-radius: 0.5rem;
   color: white;
@@ -15,4 +16,14 @@
 .button:hover {
   background: white;
   color: var(--Dark-text);
+}
+
+@media (max-width: 768px) {
+  .button {
+    position: relative;
+    margin: 1rem;
+    justify-self: center;
+    bottom: 0;
+    right: 0;
+  }
 }
